@@ -23,10 +23,10 @@ export const PersonItem: React.FC<{ person: Person }> = ({ person }) => {
         <td>{born}</td>
         <td>{died}</td>
         <td>
-          {mother ? <PersonLink person={mother} /> : (person.motherName ?? '-')}
+          {mother ? <PersonLink person={mother} /> : person.motherName || '-'}
         </td>
         <td>
-          {father ? <PersonLink person={father} /> : (person.fatherName ?? '-')}
+          {father ? <PersonLink person={father} /> : person.fatherName || '-'}
         </td>
       </tr>
     </>
